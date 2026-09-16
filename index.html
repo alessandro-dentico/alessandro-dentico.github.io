@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alessandro Dentico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4F6F6;
+    --ink: #16232B;
+    --ink-soft: #56666D;
+    --line: #D7DEDD;
+    --accent: #1F7A6C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1120px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    padding: 3.5rem 2rem;
+    border-right: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+  }
+  .avatar { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; margin: 0 0 1.3rem; display: block; }
+  .sidebar h1 { font-size: 1.4rem; margin: 0 0 0.3rem; font-weight: 600; }
+  .sidebar .role { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  .sidebar .aff { margin: 0 0 2.2rem; color: var(--ink-soft); font-size: 0.95rem; }
+  .sidebar nav { display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; }
+  .sidebar nav a {
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 0.7rem;
+    margin-left: -0.7rem;
+  }
+  .sidebar nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+  main { padding: 3.5rem 3.5rem 5rem; }
+  main section {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  main section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  main h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 1.4rem; }
+
+  .lede { font-size: 1.1rem; color: var(--ink-soft); margin: 0; max-width: 62ch; }
+
+  ul.papers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.6rem; }
+  ul.papers li { display: flex; gap: 1.1rem; align-items: baseline; }
+  .yr {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent);
+    font-size: 0.85rem;
+    min-width: 2.6rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 0.65rem;
+  }
+  ul.papers h3 { margin: 0 0 0.25rem; font-size: 1.05rem; font-weight: 600; max-width: 56ch; }
+  .venue { margin: 0 0 0.5rem; font-size: 0.88rem; color: var(--ink-soft); }
+  .abstract { margin: 0 0 0.5rem; font-size: 0.92rem; color: var(--ink-soft); max-width: 56ch; }
+  .paper-links { margin: 0; font-size: 0.88rem; }
+
+  .tags { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+
+  ul.contact { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem 2.6rem; }
+  ul.contact li { color: var(--ink-soft); font-size: 0.95rem; }
+
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar {
+      position: static; height: auto; border-right: none;
+      border-bottom: 1px solid var(--line); padding: 2rem 1.5rem;
+    }
+    .sidebar nav { flex-direction: row; flex-wrap: wrap; gap: 1rem 1.5rem; }
+    .sidebar .aff { margin-bottom: 1.2rem; }
+    main { padding: 2rem 1.5rem 3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <img class="avatar" src="photo.jpg" alt="Alessandro Dentico">
+    <h1>Alessandro Dentico</h1>
+    <p class="role">PhD Candidate in Economics</p>
+    <p class="aff">University of Pavia &amp; University of Milan</p>
+    <nav aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#fields">Fields</a>
+      <a href="#research">Research</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="about">
+      <p class="lede">
+        I am a first-year PhD student in the joint programme between the University of Pavia
+        and the University of Milan, specialising in health economics. My research is supported
+        by a scholarship from the Istituto Superiore di Sanit&agrave; (ISS) on statistical&ndash;econometric
+        methods for the analysis of population health and registry data; from my second year, I
+        will carry out research directly in cooperation with the ISS. I use causal inference
+        methods, in particular the synthetic control method, to study health policy and regional
+        healthcare systems.
+      </p>
+    </section>
+
+    <section id="fields">
+      <h2>Fields</h2>
+      <p class="tags">Health Economics, Public Economics, Policy Evaluation, Applied Econometrics</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <ul class="papers">
+        <li>
+          <span class="yr">2026</span>
+          <div>
+            <h3>Fiscal Discipline, Uneven Regional Consequences: Evidence from the Italian National Health Service</h3>
+            <p class="venue">with <a href="https://sites.google.com/a/unipv.it/cinziadinovi/">Cinzia Di Novi</a> &mdash; HEDG Working Papers 26/19, University of York</p>
+            <p class="abstract">We use a synthetic control approach to study how Italy&rsquo;s regional recovery
+              plans for public healthcare, introduced between 2007 and 2010, affected staffing levels
+              and patient out-migration, finding markedly uneven effects across regions.</p>
+            <p class="paper-links">
+              <a href="https://www.york.ac.uk/media/economics/documents/hedg/workingpapers/2026/2619.pdf">Working paper (PDF)</a>
+              &middot; <a href="https://ideas.repec.org/p/yor/hectdg/26-19.html">IDEAS/RePEc</a>
+              &middot; <a href="https://github.com/alessandro-dentico/scm-on-recovery-plans">Replication files</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p><a href="CV.pdf">Download CV (PDF)</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li>Email — <a href="mailto:alessandro.dentico01@universitadipavia.it">alessandro.dentico01@universitadipavia.it</a></li>
+        <li>GitHub — <a href="https://github.com/alessandro-dentico">alessandro-dentico</a></li>
+        <li>Google Scholar — <a href="https://scholar.google.com/citations?user=ndlzrhwAAAAJ&amp;hl=en">profile</a></li>
+        <li>LinkedIn — <a href="https://www.linkedin.com/in/alessandro-dentico">alessandro-dentico</a></li>
+      </ul>
+    </section>
+  </main>
+</div>
+</body>
+</html>
